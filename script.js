@@ -20,3 +20,15 @@ window.addEventListener("scroll", () => {
     header.classList.remove("scrolled");
   }
 });
+
+// Add animation for footer elements
+t1.from(".footer-widget", {
+  y: 50,
+  opacity: 0,
+  duration: 0.8,
+  stagger: 0.2,
+  scrollTrigger: {
+    trigger: ".footer-section",
+    start: "top 80%",
+  }
+});
