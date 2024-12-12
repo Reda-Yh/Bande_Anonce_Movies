@@ -32,6 +32,17 @@ section {
   cursor: pointer;
   color: white;
 }
+.btn2 {
+  width: 100px;
+  height: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: orangered;
+  border: 2px solid white;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  color: white;
+}
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -155,7 +166,9 @@ header nav ul {
 /* Movies Section */
 .movies {
   width: 100%;
-  height: 900px;
+  min-height: 900px;
+  height: auto;
+  padding-bottom: 40px;
 }
 .heading {
   width: 100%;
@@ -220,7 +233,9 @@ header nav ul {
 }
 .coming {
   width: 100%;
-  height: 900px;
+  min-height: 900px;
+  height: auto;
+  padding-bottom: 40px;
 }
 
 /* Footer Section */
@@ -270,6 +285,23 @@ header nav ul {
 }
 
 .footer-links a:hover {
+  color: orangered;
+  padding-left: 5px;
+}
+
+#email-link {
+  text-decoration: none;
+  color: #999;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+#email-link span {
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+#email-link:hover {
   color: orangered;
   padding-left: 5px;
 }
@@ -327,7 +359,37 @@ header nav ul {
   margin: 0;
 }
 
-@media (max-width: 450px) {
+/* Responsive Design */
+@media screen and (max-width: 1130px) {
+  .movie-cards {
+    padding: 0 20px;
+  }
+  
+  .movie-card {
+    width: 200px;
+  }
+  
+  .movie-card img {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-text h1 {
+    font-size: 3rem;
+  }
+  
+  header nav ul {
+    gap: 20px;
+    width: auto;
+  }
+  
+  .movie-card {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 450px) {
   body {
     height: 100%;
     width: 100%;
@@ -349,7 +411,7 @@ header nav ul {
     order: 1;
   }
   .home-text h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
   .home-text {
     top: 60%;
@@ -358,9 +420,17 @@ header nav ul {
     margin-right: 30px;
   }
   header nav ul {
-    gap: 30px;
-    width: 380px;
-    margin-top: 10px;
+    gap: 10px;
+  }
+  header nav a {
+    font-size: 0.9rem;
+  }
+  .movie-cards {
+    justify-content: center;
+  }
+  
+  .movie-card {
+    width: 280px;
   }
   .home .bg {
     height: 500px;
@@ -368,13 +438,6 @@ header nav ul {
   }
   .home {
     height: 600px;
-  }
-  .movie-card {
-    width: 370px;
-  }
-  .movie-card img {
-    width: 320px;
-    height: 290px;
   }
   .movies {
     height: 4560px;
